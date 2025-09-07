@@ -1,0 +1,114 @@
+@import "reset.css";
+
+/*
+    Variables
+ */
+:root {
+    /*Default theme*/
+    --bg-color: #282828;
+    --txt-color: #33ff00;
+
+    /*Global*/
+    --default-margin: 1em;
+    --mobile-margin: 0.25em;
+    --lighter-margin: 1em;
+    --default-padding: 0.75em;
+    --default-border: 1px dashed var(--txt-color);
+}
+
+/*
+    Main style
+*/
+body {
+    background: var(--bg-color);
+    color: var(--txt-color);
+    font-family: 'Courier New', monospace;
+    /*overflow: hidden;*/
+}
+
+a {
+    text-decoration: underline;
+    color: var(--txt-color);
+}
+
+.bordered {
+    border: var(--default-border);
+    padding: var(--default-padding);
+}
+
+.container {
+    margin: var(--default-margin);
+    position: relative;
+    z-index: 1;
+    padding: var(--default-padding);
+}
+
+/*
+    Reduce margin of the container on mobile
+*/
+@media only screen and (max-width: 480px) {
+    .container {
+        margin: var(--mobile-margin);
+    }
+}
+
+/*This class is used for technologies in work experiences*/
+.stylized-ul {
+    list-style: circle;
+    margin: var(--lighter-margin);
+}
+
+/*
+    Old screen effect
+ */
+.scanlines {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+            rgba(18, 16, 16, 0) 50%,
+            rgba(0, 0, 0, 0.25) 50%
+    );
+    background-size: 100% 2px;
+    pointer-events: none;
+    z-index: 2;
+    animation: scan 0.3s infinite;
+}
+
+@keyframes scan {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(100%);
+    }
+}
+
+.noise-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.noise {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background-color: white;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.btn {
+    background-color: var(--bg-color);
+    color: var(--txt-color);
+    cursor: pointer;
+    border: var(--default-border);
+    padding: var(--default-padding);
+}

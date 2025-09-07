@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thomas SAZERAT dev</title>
+  </head>
+  <body>
+    <div class="noise-container"></div>
+    <div class="scanlines"></div>
+    <div>
+      <button class="btn" id="remove-effects">
+        Remove effects
+      </button>
+    </div>
+    <div class="container">
+      <p>Note: this website is better on a computer screen !</p>
+      <h1 class="bordered">Thomas SAZERAT dev</h1>
+    </div>
+    <div class="container">
+      <h5>What is this website ?</h5>
+      <div class="bordered">
+        <p>Hello there ! Welcome to my humble digital lair where pixels come to retire and code occasionally works on the first try (but mostly doesn’t).</p>
+        <p>Feel free to snoop around and discover my projects, my passions, and probably more than you ever wanted to know about a random dev on the internet.</p>
+        <p>PS: This old-school look? Totally on purpose. Definitely not because I can't design.</p>
+      </div>
+    </div>
+    <div class="container">
+      <h5>Who am I ?</h5>
+      <div class="bordered">
+        <p>
+          I’m a Computer Science student bravely juggling between coding, debugging, and pretending I understand complex algorithms, all while working as a web developer at Crédit Agricole and studying at 3IL Ingénieurs.
+          I’m into pretty much everything in CS: programming, neural networks, DEVOPS, and shouting at my terminal when things go wrong (so, basically, full-stack developer life).
+          In my free time, I tinker with random side projects like a web crawler in Python (Now Amazon thinks I'm a bot?), a C# ASP.NET Core stock management webapp, and even a UDP socket server in Rust.
+          Curious? My GitHub is <a href="https://github.com/Namularbre/">right here</a> - go ahead, judge my code (gently).
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <h5>Work experience</h5>
+      <div class="bordered">
+        <p>I've already created future legacy code in different places: </p>
+        <ul>
+          <v-job
+                  data-title="Fullstack Developer - Crédit Agricole Centre Ouest - Work-study program - 3IL Ingénieurs"
+                  data-technologies="C#, ASP.NET, .NET 8, SQL, MS SQL Server, Bootstrap"
+                  data-timestamp="09/09/2024-09/09/2027"
+                  data-description="You're bank account hasn't been removed, I must make a good job then !">
+          </v-job>
+
+          <v-job
+                  data-title="Developer - Borea Dental - Work-study program - Licence professionnelle développeur d'application web et big data"
+                  data-technologies="C++/Qt, Node.JS/Express, JavaScript, TypeScript, Bootstrap, SQL, Mariadb, Min.io"
+                  data-timestamp="09/2022-07/2023"
+                  data-description="Where I dynamized a C++ software that explain how to build Borea's products to create assembly instructions from a JSON file">
+          </v-job>
+
+          <v-job
+                  data-title="Fullstack Developer - Madeleine Bijou - Internship DUT Informatique"
+                  data-technologies="Git, PHP8-7, MS SQL Server"
+                  data-timestamp="04/2022-06/2022"
+                  data-description="I built a PHP application to keep a good level of food safety in the company">
+          </v-job>
+        </ul>
+      </div>
+    </div>
+
+    <footer class="container">
+      Thomas SAZERAT dev
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
