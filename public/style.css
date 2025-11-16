@@ -58,34 +58,6 @@ a {
     margin: var(--lighter-margin);
 }
 
-/*
-    Old screen effect
- */
-.scanlines {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-            rgba(18, 16, 16, 0) 50%,
-            rgba(0, 0, 0, 0.25) 50%
-    );
-    background-size: 100% 2px;
-    pointer-events: none;
-    z-index: 2;
-    animation: scan 0.3s infinite;
-}
-
-@keyframes scan {
-    from {
-        transform: translateY(-100%);
-    }
-    to {
-        transform: translateY(100%);
-    }
-}
-
 .noise-container {
     position: fixed;
     top: 0;
@@ -111,4 +83,24 @@ a {
     cursor: pointer;
     border: var(--default-border);
     padding: var(--default-padding);
+}
+
+/*row-lg make a row only if we are on a large screen*/
+.row-lg {
+    display: flex;
+    flex-direction: row;
+}
+
+@media only screen and (max-width: 480px) {
+    .row-lg {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.language-name {
+    font-size: calc(1em * 2);
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
 }
