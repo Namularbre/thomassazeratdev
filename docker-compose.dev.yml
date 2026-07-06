@@ -1,0 +1,6 @@
+services:
+  thomassazeratdev:
+    build: .
+    container_name: thomassazeratdev
+    ports:
+      - "3000:3000"
